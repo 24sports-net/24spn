@@ -1,63 +1,53 @@
-/**
- * script.js
- * Handles fetching channel info and auto-refreshing expired HLS links
- */
+// URL of your GitHub API JSON
+const apiURL = "https://raw.githubusercontent.com/abusaeeidx/CricHd-playlists-Auto-Update-permanent/main/api.json";
 
-(function(global) {
+const channelList = document.getElementById("channel-list");
+const videoPlayer = document.getElementById("video-player");
 
-  // Config: set your JSON API URL here
-  const API_URL = "https://raw.githubusercontent.com/abusaeeidx/CricHd-playlists-Auto-Update-permanent/main/api.json";
-  const REFRESH_INTERVAL = 5 * 60 * 1000; // 5 minutes
-
-  function getParam(name) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(name);
-  }
-
-  async function fetchChannels() {
+async function fetchChannels() {
     try {
-      const res = await fetch(API_URL, { cache: "no-cache" });
-      if (!res.ok) throw new Error(`Failed to fetch API: ${res.status}`);
-      const data = await res.json();
-      if (!Array.isArray(data)) throw new Error("Invalid API format: expected an array");
-      return data;
-    } catch (err) {
-      console.error("Error fetching channels:", err);
-      return [];
+        const response = await fetch(apiURL);
+        const channels = await response.json();
+
+        channels.forEach(channel => {
+            const li = document.createElement("li");
+            li.className = "channel-item";
+
+            li.innerHTML = `
+                <img src="${channel.logo}" alt="${channel.name}" class="channel-logo">
+                <span>${channel.name}</span>
+            `;
+
+            li.addEventListener("click", () => {
+                playChannel(channel);
+            });
+
+            channelList.appendChild(li);
+        });
+
+    } catch (error) {
+        console.error("Error fetching channels:", error);
+        channelList.innerHTML = "<li>Error loading channels</li>";
     }
-  }
+}
 
-  async function getChannelById(id) {
-    if (!id) return null;
-    const channels = await fetchChannels();
-    return channels.find(c => c.id === id) || null;
-  }
-
-  async function updatePlayer(player, channelId) {
-    const channel = await getChannelById(channelId);
-    if (!channel) {
-      console.warn("Channel not found during refresh:", channelId);
-      return;
+function playChannel(channel) {
+    if (Hls.isSupported()) {
+        const hls = new Hls();
+        hls.loadSource(channel.link);
+        hls.attachMedia(videoPlayer);
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+            videoPlayer.play();
+        });
+    } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+        videoPlayer.src = channel.link;
+        videoPlayer.play();
+    } else {
+        alert("Your browser does not support HLS.");
     }
 
-    // Only update if link changed
-    if (player.source !== channel.link) {
-      console.log("Updating player link for channel:", channel.name);
-      player.load(channel.link);
-      player.source = channel.link; // store current link
-    }
-  }
+    console.log("Now playing:", channel.name);
+}
 
-  global.getChannelInfo = async function() {
-    const id = getParam("id");
-    if (!id) return null;
-    return await getChannelById(id);
-  };
-
-  global.autoRefreshPlayer = function(player) {
-    const channelId = getParam("id");
-    if (!channelId) return;
-    setInterval(() => updatePlayer(player, channelId), REFRESH_INTERVAL);
-  };
-
-})(window);
+// Initialize
+fetchChannels();
