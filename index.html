@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CRICHD | Player - 24SPN</title>
+<link rel="shortcut icon" href="https://i.postimg.cc/sxkGqfMT/x-fire-flix.png" />
+<!-- Clappr Player -->
+<script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #player {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    background: #000;
+  }
+
+  .loading {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    color: #fff;
+    font-size: 1.1rem;
+    z-index: 1000;
+  }
+
+  .topbar {
+    position: fixed;
+    left: 18px;
+    top: 12px;
+    z-index: 1010;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    pointer-events: none;
+  }
+
+  .channel-logo {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  }
+
+  .channel-title {
+    font-weight: 600;
+    font-size: 1rem;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+  }
+</style>
+</head>
+<body>
+
+<div id="player"></div>
+<div class="topbar" id="topbar" style="display:none;">
+  <img id="chlogo" class="channel-logo" src="" alt="logo">
+  <div id="chtitle" class="channel-title">Loading...</div>
+</div>
+<div class="loading" id="loading">Loading Player...</div>
+
+<!-- Your hosted script.js -->
+<script src="https://24sports-net.github.io/24spn/script.js"></script>
+
+<script>
+(async function () {
+  const loading = document.getElementById("loading");
+  const topbar = document.getElementById("topbar");
+  const chlogo = document.getElementById("chlogo");
+  const chtitle = document.getElementById("chtitle");
+
+  const params = new URLSearchParams(window.location.search);
+  const channelId = params.get("id");
+
+  if (!channelId) {
+    loading.textContent = "No channel ID provided (?id=...)";
+    return;
+  }
+
+  try {
+    // Fetch channel info (from your script.js)
+    const channel = await getChannelInfo(channelId);
+
+    if (!channel) {
+      loading.textContent = "Channel not found in API!";
+      return;
+    }
+
+    // Update topbar
+    chtitle.textContent = channel.name || channelId;
+    if (channel.logo) chlogo.src = channel.logo;
+    topbar.style.display = "flex";
+
+    // Remove loading screen
+    loading.remove();
+
+    // Initialize player
+    const player = new Clappr.Player({
+      parentId: "#player",
+      source: channel.link,
+      width: "100%",
+      height: "100%",
+      autoPlay: true,
+      mute: false,
+      mimeType: "application/x-mpegURL",
+      playback: {
+        hlsjsConfig: {
+          xhrSetup: function (xhr, url) {
+            try {
+              if (channel.referer) xhr.setRequestHeader("referer", channel.referer);
+              if (channel.origin) xhr.setRequestHeader("origin", channel.origin);
+            } catch (e) {
+              console.warn("Header setup failed:", e);
+            }
+          },
+        },
+      },
+    });
+
+    // Track current source
+    player._currentSource = channel.link;
+
+    // Auto-refresh every 5 min (or when source changes)
+    autoRefreshPlayer(player, channelId);
+
+    // Page title
+    document.title = `${channel.name} | CRICHD - 24SPN`;
+
+    // Handle player error
+    player.core?.on?.(Clappr.Events.PLAYER_ERROR, (err) => {
+      console.error("Player error:", err);
+      const msg = document.createElement("div");
+      msg.className = "loading";
+      msg.textContent = "Playback error — stream may be offline or expired.";
+      document.body.appendChild(msg);
+    });
+
+  } catch (err) {
+    console.error("Initialization error:", err);
+    loading.textContent = "Error loading channel data.";
+  }
+})();
+</script>
+
+</body>
+</html>
